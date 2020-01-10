@@ -6,5 +6,7 @@ La carpeta belatrix_test contiene el proyecto con la solución al problema plant
 
 Se debe crear la carpeta C:\test o modificar la ruta para ejecutar las pruebas con el registro en archivo activado.
 
+Para el almacenamiento de log en base de datos, se creó una base de datos RDS Postgresql en Amazon y se realizó la respectiva conexión.
+
 El código se desarrollo con NetBeans 8.2, Java 1.8.
 

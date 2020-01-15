@@ -1,4 +1,4 @@
-package belatrix_test;
+package  belatrix_test;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -27,7 +27,7 @@ public class JobLogger {
     private final boolean logToDatabase;
     private final Map dbParams;
     private final Logger logger;
-    Connection connection;
+    private Connection connection;
 
     /**
      * JobLogger Class Builder
@@ -79,7 +79,6 @@ public class JobLogger {
             if (!logFile.exists()) {
                     logFile.createNewFile();
             }
-
             FileHandler fh = new FileHandler(dbParams.get("logFileFolder") + "/logFile.txt");
             logger.addHandler(fh);
         }
@@ -162,6 +161,7 @@ public class JobLogger {
             Statement stmt = connection.createStatement();
             String sentence = "insert into \"Log_Values\" values ('" + l + "', " + String.valueOf(t) + ")";
             stmt.executeUpdate(sentence);
+            stmt.close();
             }
             catch(Exception e){
                 e.printStackTrace();

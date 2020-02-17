@@ -16,7 +16,7 @@ public class JobLoggerTest {
     
     public JobLoggerTest() {
     }
-    
+    //test
     @BeforeClass
     public static void setUpClass() {
         try {
